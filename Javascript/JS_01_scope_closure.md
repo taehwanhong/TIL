@@ -121,7 +121,10 @@ function tellMe(){
 }
 console.log(name);//taehwan
 ```
-
+- 자 먼저 나온 name은 전역변수임
+- tellMe함수 안에 나온 name은 지역변수로, 함수가 끝나면서 동시에 소멸.
+- 따라서 함수 안의 console.log에서는 함수 안에서 선언된 지역변수가 우선
+- 함수 외부의 console.log 에서는 다시 전역으로 돌아왔으니 taehwan을 출력
 
 ### Study Reference
  > [속깊은 자바스크립트](http://unikys.tistory.com/295)    
