@@ -10,3 +10,7 @@
 ### 기초 작성 Gudie
 > 1. Topic별로 Folder정리합니다.
 > 2. file형태는 .md로, GFM을 따릅니다. *[GFM](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
+
+### 현재까지 작성 List
+1. JS
+ - Scope and Closure
