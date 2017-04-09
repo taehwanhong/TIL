@@ -67,6 +67,57 @@ class Polygon {
     }
 }
 
+## 메소드 정의
+
+### 생성자
+아래 코드를 보자
+```
+var Polygon = class {
+    constructor(height, width){
+        this.width = width;
+        this.height = height;
+    }
+    constructor2(height2, width2){
+        this.height = height2 * 2;
+        this.widht = width2 * 2;
+    }
+}
+```
+> 위 코드는 실행하면 당연히 오류가 뜬다.
+> 왜냐면 하나의 클래스에서는 하나의 생성자만 가질수 있기 때문임.
+
+```
+class Polygon {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+}
+ 
+class Square extends Polygon { // 그러하다 extends가 가능하다.
+    constructor(length) {
+        // length로 다각형의 넓이와 높이를 정의하기 위해 부모클래스의 생성자를 호출합니다.
+        super(length, length);
+        // Note: 파생 클래스에서, 'this'를 사용하기 전에는 반드시 super()를
+        // 호출하여야 합니다. 그렇지 않을 경우 참조에러가 발생합니다.
+        this.name = 'Square';
+    }
+ 
+    get area() {
+        return this.height * this.width;
+    }
+ 
+    set area(value) {
+        this.area = value;
+    }
+}
+ 
+var test = new Square(4);
+console.log(test.area);
+```
+
 
 ### reference
  - [JUI coreJS blog](http://blog.jui.io/?p=13)
+ - [정리 잘된 블로그](http://beomy.tistory.com/15)
+ 
